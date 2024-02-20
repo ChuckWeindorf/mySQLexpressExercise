@@ -1,14 +1,15 @@
 import express from "express";
 import config from "./config";
 // TODO: import router from routes/
-import productRouter from "./routes/product.route";
+import router from "./routes";
 
 const app = express();
 
 app.use(express.json());
-app.use("/api/product", productRouter);
+
 
 // TODO: use the imported router to handle all requests
+app.use("/api", router);
 
 app.use((err, req, res, next) => {
   console.error(err);

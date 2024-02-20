@@ -15,8 +15,8 @@ function query(qryString, values)
   {
    return new Promise((resolve, reject) => {
      connection.query(qryString, values, (err, results) => {
-       if (err) reject(err);
-       resolve(results);
+       if (err) {reject(err)}
+       else {resolve(results)};
      });
    });
   }

@@ -1,6 +1,6 @@
 //controller between mysql and the express routes
 
-import query from "./utility";
+import query from "../db/connection";
 
 //prevent SQL injection through the ? feature - native protection in the ? process
 async function findAll() {
